@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+#root {
+  height: 100%;
+}
+
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.signup-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ant-form {
+  flex-grow: 1;
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.music-note {
+  position: fixed;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.1);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Adjust note positions */
+.music-note:nth-child(1) {
+  top: 5%;
+  left: 5%;
+}
+
+.music-note:nth-child(2) {
+  top: 15%;
+  right: 5%;
+  animation-delay: -2s;
+}
+
+.music-note:nth-child(3) {
+  bottom: 15%;
+  left: 10%;
+  animation-delay: -4s;
+}
+
+.music-note:nth-child(4) {
+  bottom: 5%;
+  right: 10%;
+  animation-delay: -6s;
+}
+
+@media (max-height: 600px) {
+  .signup-container {
+    align-items: flex-start; /* Align to top on very small height screens */
+    padding-top: 20px;
+  }
+}
+
+/* You can add this if you want to ensure the form is never too tall for the viewport */
+@media (max-height: 700px) {
+  .signup-card {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-height: 600px) {
+  .signup-container {
+    align-items: flex-start;
+  }
+
+  .signup-card {
+    margin-top: 20px;
+  }
+}
+
+
